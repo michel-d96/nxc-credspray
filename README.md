@@ -32,17 +32,17 @@ Requires Python 3 and NetExec installed:
 pipx install netexec
 
 # Clone this repo
-git clone https://github.com/michel-d96/nxc_credspray.git
-cd nxc_credspray
+git clone https://github.com/michel-d96/nxc-cs.py.git
+cd nxc_cs.py
 
 # Make executable (optional)
-chmod +x nxc_credspray.py
+chmod +x nxc_cs.py
 ```
 
 ## Usage
 
 ```
-python3 nxc_credspray.py -t <target> -u <user> [-p <password>] [-H <hash>] [nxc options]
+python3 nxc_cs.py -t <target> -u <user> [-p <password>] [-H <hash>] [nxc options]
 ```
 
 ### Required Arguments
@@ -68,43 +68,43 @@ All other arguments are passed directly to nxc (e.g., `--local-auth`, `--continu
 
 ### Basic password spray
 ```bash
-python3 nxc_credspray.py -t targets.txt -u users.txt -p passwords.txt
+python3 nxc_cs.py -t targets.txt -u users.txt -p passwords.txt
 ```
 
 ### Single target with single credential
 ```bash
-python3 nxc_credspray.py -t 192.168.1.10 -u administrator -p Password123
+python3 nxc_cs.py -t 192.168.1.10 -u administrator -p Password123
 ```
 
 ### Hash-based authentication
 ```bash
-python3 nxc_credspray.py -t targets.txt -u users.txt -H hashes.txt
+python3 nxc_cs.py -t targets.txt -u users.txt -H hashes.txt
 ```
 
 ### Combined passwords AND hashes
 ```bash
 # Tests all passwords first, then all hashes
-python3 nxc_credspray.py -t targets.txt -u users.txt -p passwords.txt -H hashes.txt
+python3 nxc_cs.py -t targets.txt -u users.txt -p passwords.txt -H hashes.txt
 ```
 
 ### With local authentication
 ```bash
-python3 nxc_credspray.py -t targets.txt -u admin -p password --local-auth
+python3 nxc_cs.py -t targets.txt -u admin -p password --local-auth
 ```
 
 ### Test only specific protocols
 ```bash
-python3 nxc_credspray.py -t targets.txt -u users.txt -p passwords.txt --protocols smb,winrm
+python3 nxc_cs.py -t targets.txt -u users.txt -p passwords.txt --protocols smb,winrm
 ```
 
 ### Skip port scan (test all protocols)
 ```bash
-python3 nxc_credspray.py -t 192.168.1.10 -u admin -p pass --skip-scan
+python3 nxc_cs.py -t 192.168.1.10 -u admin -p pass --skip-scan
 ```
 
 ### Continue on success
 ```bash
-python3 nxc_credspray.py -t targets.txt -u users.txt -p passwords.txt --continue-on-success
+python3 nxc_cs.py -t targets.txt -u users.txt -p passwords.txt --continue-on-success
 ```
 
 ## Output
