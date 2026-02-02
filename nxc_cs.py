@@ -47,10 +47,11 @@ def print_banner():
     print(banner)
 
 
-# Protocol to port mapping (no SSH)
+# Protocol to port mapping
 PROTOCOLS = {
     'smb': [445],
     'winrm': [5985, 5986],
+    'wmi': [135],
     'rdp': [3389],
     'ldap': [389, 636],
     'mssql': [1433],
@@ -60,6 +61,7 @@ PROTOCOLS = {
 PROTOCOL_COLORS = {
     'smb': Colors.BLUE,
     'winrm': Colors.RED,
+    'wmi': Colors.YELLOW,
     'rdp': Colors.CYAN,
     'ldap': Colors.CYAN,
     'mssql': Colors.MAGENTA,
