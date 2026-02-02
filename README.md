@@ -2,7 +2,10 @@
 
 A wrapper for [NetExec (nxc)](https://github.com/Pennyw0rth/NetExec) that automatically scans targets for open ports and tests credentials on all discovered protocols.
 
-![credspray iamge](assets/image.png)
+![credspray init_image](assets/start.png)
+
+eventually displays a summary of all successful authentications at the end of the run.
+![credspray summary_image](assets/summary.png)
 
 ## Features
 
@@ -16,12 +19,13 @@ A wrapper for [NetExec (nxc)](https://github.com/Pennyw0rth/NetExec) that automa
 ## Supported Protocols
 
 | Protocol | Ports |
-|----------|-------|
+|---------|-------|
 | SMB | 445 |
 | WinRM | 5985, 5986 |
 | RDP | 3389 |
 | LDAP | 389, 636 |
 | MSSQL | 1433 |
+| RPC | 135 |
 
 ## Installation
 
