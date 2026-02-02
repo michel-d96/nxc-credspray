@@ -32,8 +32,8 @@ Requires Python 3 and NetExec installed:
 pipx install netexec
 
 # Clone this repo
-git clone https://github.com/michel-d96/nxc-cs.py.git
-cd nxc_cs.py
+git clone https://github.com/michel-d96/nxc-credspray.git
+cd nxc-credspray
 
 # Make executable (optional)
 chmod +x nxc_cs.py
